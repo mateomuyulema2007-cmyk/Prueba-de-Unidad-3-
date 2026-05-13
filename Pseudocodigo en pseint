@@ -1,0 +1,41 @@
+lgoritmo LogiCodeUTA
+		Definir opcion, cargados, aprobados, reprobados Como Entero
+		Definir num1, num2, promedio, notaMayor, notaMenor, suma Como Real
+		Definir nombreEstudiante, fecha, carrera Como Cadena
+		
+		nombreEstudiante <- "Mateo Alexander Muyulema Moyolema"
+		carrera <- "Ingenieria en Software - UTA"
+		opRealizadas <- Falso
+		notasRegistradas <- Falso
+		
+		Repetir
+			Escribir "=== MENU LOGICODEUTA ==="
+			Escribir "1. Operaciones Basicas"
+			Escribir "2. Procesar Notas (estudiantes.txt)"
+			Escribir "3. Guardar Reporte"
+			Escribir "4. Salir"
+			Leer opcion
+			
+			Segun opcion Hacer
+				1:
+					Escribir "Ingrese num 1 y num 2:"
+					Leer num1, num2
+					Escribir "Suma: ", num1 + num2
+					Si num2 <> 0 Entonces
+						Escribir "Div: ", num1 / num2
+					Sino
+						Escribir "Error: Division para cero"
+					FinSi
+					opRealizadas <- Verdadero
+				2:
+					// Simulacion de lectura de archivo
+					Escribir "Procesando archivo estudiantes.txt..."
+					// (Aqui iría la logica de ciclo para los 30 alumnos)
+					notasRegistradas <- Verdadero
+				3:
+					Escribir "Ingrese fecha actual:"
+					Leer fecha
+					Escribir "Generando reporte resultados.txt para: ", nombreEstudiante
+			FinSegun
+		Hasta Que opcion = 4
+FinAlgoritmo
